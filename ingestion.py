@@ -24,12 +24,12 @@ docs_splits = text_splitter.split_documents(docs_list)
 
 print(f"Split {len(docs_list)} documents into {len(docs_splits)} chunks.")
 
-vector_store = Chroma.from_documents(
-    documents = docs_splits,
-    embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2"),
-    persist_directory = "./.chroma",
-    collection_name = "rag-chroma",
-)
+# vector_store = Chroma.from_documents(
+#     documents = docs_splits,
+#     embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2"),
+#     persist_directory = "./.chroma",
+#     collection_name = "rag-chroma",
+# )
 
 
 retriever = Chroma(
